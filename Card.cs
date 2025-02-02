@@ -7,6 +7,7 @@ namespace CardEngine
         Rank rank;
         Suit suit;
         string colour;
+
         public Card(Rank rank, Suit suit) {
             this.rank = rank;
             this.suit = suit;
@@ -15,7 +16,8 @@ namespace CardEngine
 
         public override string ToString()
         {
-            return $"{rank} of {suit} | {colour}";
+            //return $"{rank} of {suit} | {colour}";
+            return $"{rank} of {suit}";
         }
     }
     enum Suit
@@ -28,7 +30,6 @@ namespace CardEngine
 
     enum Rank
     {
-        One = 1,
         Two = 2,
         Three = 3,
         Four = 4,
