@@ -1,5 +1,6 @@
 using System;
 using System.Globalization;
+using System.Runtime.InteropServices;
 
 namespace CardEngine
 {
@@ -17,6 +18,8 @@ namespace CardEngine
                 generateDeck();
                 shuffleDeck();
             }
+
+            Console.WriteLine(deck[0]);
         }
 
         public void addCardToDeck(Card card) {
@@ -53,6 +56,14 @@ namespace CardEngine
                 deck[i] = deck[j];
                 deck[j] = tmp;
             }
+        }
+
+        public Card[] getDeck() {
+            return deck;
+        }
+
+        public int getDeckSize() {
+            return deckSize;
         }
     }
 }
