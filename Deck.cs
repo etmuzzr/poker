@@ -18,8 +18,6 @@ namespace CardEngine
                 generateDeck();
                 shuffleDeck();
             }
-
-            Console.WriteLine(deck[0]);
         }
 
         public void addCardToDeck(Card card) {
@@ -64,6 +62,16 @@ namespace CardEngine
 
         public int getDeckSize() {
             return deckSize;
+        }
+
+        public override string ToString() {
+            string cards = "";
+
+            for (int i = 0; i < deckSize; i++) {
+                cards += $"{deck[i].ToString()}, ";
+            }
+
+            return cards;
         }
     }
 }
