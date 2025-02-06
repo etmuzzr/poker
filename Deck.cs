@@ -6,7 +6,7 @@ namespace CardEngine
     class Deck 
     {
         private Card[] deck;
-        private int deckSize = 0; //The current size of the deck (will point to the last element in a deck)
+        private int deckSize = -1; //The current size of the deck (will point to the last element in a deck)
         private bool canGenerate;
 
         public Deck(int deckSize, bool generate) {
